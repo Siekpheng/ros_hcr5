@@ -1,36 +1,53 @@
 import os
-import xacro
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import Command, LaunchConfiguration
+from launch.conditions import IfCondition, UnlessCondition
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    # 1. Paths
+    # 1. Declare Arguments
+    declare_use_mock_hardware = DeclareLaunchArgument(
+        'use_mock_hardware',
+        default_value='true',
+        description='Start Gazebo if true, otherwise connect to real robot'
+    )
+    
+    # Store the value in a variable to use in conditions
+    use_mock_hardware = LaunchConfiguration('use_mock_hardware')
+    
+    # 2. Paths
     pkg_description = get_package_share_directory("hcr5_description")
     pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")
-    
     xacro_file = os.path.join(pkg_description, "urdf", "hcr5.xacro")
 
-    # 2. Process Xacro
-    robot_description_content = xacro.process_file(xacro_file).toxml()
-
-    # 3. Environment Variable for Meshes
-    set_gz_resource_path = SetEnvironmentVariable(
-        name='IGN_GAZEBO_RESOURCE_PATH',
-        value=[os.path.join(pkg_description, '..')]
+    # 3. Dynamic Xacro Processing
+    # This sends the 'use_mock_hardware' argument into the Xacro file
+    robot_description_content = ParameterValue(
+        Command(['xacro ', xacro_file, ' use_mock_hardware:=', use_mock_hardware]),
+        value_type=str
     )
 
-    # 4. Gazebo Sim Launch
+    # 4. Environment for Simulation
+    set_gz_resource_path = SetEnvironmentVariable(
+        name='IGN_GAZEBO_RESOURCE_PATH',
+        value=[os.path.join(pkg_description, '..')],
+        condition=IfCondition(use_mock_hardware) # Only run if simulating
+    )
+
+    # 5. Gazebo Sim Launch (SIM ONLY)
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")
         ),
         launch_arguments={'gz_args': '-r sensors.sdf'}.items(),
+        condition=IfCondition(use_mock_hardware)
     )
 
-    # 5. The Clock Bridge (CRITICAL: Added back into the logic)
+    # 6. The Clock/Camera Bridge (SIM ONLY)
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -39,47 +56,48 @@ def generate_launch_description():
             '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'
         ],
-        output='screen'
+        condition=IfCondition(use_mock_hardware)
     )
 
-    # 6. Nodes
+    # 7. Robot State Publisher (ALWAYS RUN)
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        output="screen",
         parameters=[{
-            "use_sim_time": True, 
+            "use_sim_time": use_mock_hardware, 
             "robot_description": robot_description_content
         }],
     )
 
+    # 8. Spawn Robot in Gazebo (SIM ONLY)
     spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
         arguments=["-topic", "robot_description", "-name", "hcr5"],
-        output="screen",
-        parameters=[{"use_sim_time": True}] # Added for sync
+        condition=IfCondition(use_mock_hardware)
     )
 
-    # 7. Controller Spawners (Ensure they use sim time too)
+    # 9. Controller Spawners (ALWAYS RUN)
+    # Note: On a real robot, 'use_sim_time' must be False
     joint_state_broadcaster = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_state_broadcaster"],
-        parameters=[{"use_sim_time": True}]
+        parameters=[{"use_sim_time": use_mock_hardware}]
     )
 
     arm_controller = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["arm_controller"],
-        parameters=[{"use_sim_time": True}]
+        parameters=[{"use_sim_time": use_mock_hardware}]
     )
 
     return LaunchDescription([
+        declare_use_mock_hardware,
         set_gz_resource_path,
         gz_sim,
-        bridge,  # <--- BRIDGE ADDED HERE
+        bridge,
         robot_state_publisher,
         spawn_entity,
         joint_state_broadcaster,

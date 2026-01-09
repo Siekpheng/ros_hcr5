@@ -5,6 +5,8 @@
 <!-- <xacro:include filename="$(find hcr5_description)/urdf/hcr5.trans" /> -->
 <xacro:include filename="$(find hcr5_description)/urdf/hcr5.gazebo" />
 
+<xacro:arg name="use_mock_hardware" default="true" />
+
 <link name="world"/>
 
 <joint name="world_joint" type="fixed">
@@ -223,9 +225,19 @@
   <limit upper="6.283185" lower="0.0" effort="1000" velocity="100"/>
 </joint>
 
-<ros2_control name="IgnitionSystem" type="system">
+
+
+
+<ros2_control name="HCR5_Control" type="system">
   <hardware>
-    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    <xacro:if value="$(arg use_mock_hardware)">
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </xacro:if>
+    
+    <xacro:unless value="$(arg use_mock_hardware)">
+      <plugin>hcr_hardware/HCR5HardwareInterface</plugin>
+      <param name="robot_ip">192.168.1.10</param>
+    </xacro:unless>
   </hardware>
   <joint name="joint_1">
     <command_interface name="position"/>
