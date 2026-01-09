@@ -17,6 +17,7 @@
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/moveit_rviz.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/warehouse_db.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/static_virtual_joint_tfs.launch.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/move_to_pose.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/hcr5_full_sim.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/rsp.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/demo.launch.py
