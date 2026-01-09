@@ -89,7 +89,7 @@ def main(args=None):
     client = MoveRobotClient()
     
     # Target Coordinates (Adjust as safe)
-    client.send_goal(0.1, -0.6, 0.5) 
+    client.send_goal(-0.3, 0.165, 0.5) 
     
     rclpy.spin(client)
 
