@@ -1,0 +1,1 @@
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/src/hcr5_moveit_config/launch/hcr5_full_sim.launch.py
