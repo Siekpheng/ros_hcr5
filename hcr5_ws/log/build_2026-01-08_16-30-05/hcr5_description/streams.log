@@ -1,0 +1,63 @@
+[0.007s] Invoking command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/forsaken/Documents/hcr5_ws/src/hcr5_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/forsaken/Documents/hcr5_ws/install/hcr5_description
+[0.045s] -- The C compiler identification is GNU 11.4.0
+[0.079s] -- The CXX compiler identification is GNU 11.4.0
+[0.083s] -- Detecting C compiler ABI info
+[0.132s] -- Detecting C compiler ABI info - done
+[0.136s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.136s] -- Detecting C compile features
+[0.136s] -- Detecting C compile features - done
+[0.138s] -- Detecting CXX compiler ABI info
+[0.186s] -- Detecting CXX compiler ABI info - done
+[0.191s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.191s] -- Detecting CXX compile features
+[0.191s] -- Detecting CXX compile features - done
+[0.192s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.283s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.318s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.335s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.400s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.401s] -- Added test 'lint_cmake' to check CMake code style
+[0.401s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.402s] -- Added test 'xmllint' to check XML markup files
+[0.403s] -- Configuring done
+[0.404s] -- Generating done
+[0.405s] -- Build files have been written to: /home/forsaken/Documents/hcr5_ws/build/hcr5_description
+[0.408s] Invoked command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/forsaken/Documents/hcr5_ws/src/hcr5_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/forsaken/Documents/hcr5_ws/install/hcr5_description
+[0.410s] Invoking command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/forsaken/Documents/hcr5_ws/build/hcr5_description -- -j24 -l24
+[0.434s] Invoked command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/forsaken/Documents/hcr5_ws/build/hcr5_description -- -j24 -l24
+[0.440s] Invoking command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/forsaken/Documents/hcr5_ws/build/hcr5_description
+[0.446s] -- Install configuration: ""
+[0.447s] -- Execute custom install script
+[0.447s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/launch/display.launch.py
+[0.454s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/launch/gazebo.launch.py
+[0.460s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/launch/real_robot_rviz.launch.py
+[0.466s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/urdf/hcr5.gazebo
+[0.471s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/urdf/hcr5.trans
+[0.478s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/urdf/hcr5.urdf
+[0.484s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/urdf/hcr5.xacro
+[0.489s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/urdf/materials.xacro
+[0.495s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/base_link.stl
+[0.501s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link1_1.stl
+[0.506s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link2_1.stl
+[0.510s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link3_1.stl
+[0.516s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link4_1.stl
+[0.522s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link5_1.stl
+[0.527s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/meshes/link6_1.stl
+[0.532s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/rviz/hcr5.rviz
+[0.537s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/config/hcr5_controllers.yaml
+[0.542s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/ament_index/resource_index/package_run_dependencies/hcr5_description
+[0.548s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/ament_index/resource_index/parent_prefix_path/hcr5_description
+[0.553s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/environment/ament_prefix_path.sh
+[0.559s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/environment/ament_prefix_path.dsv
+[0.565s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/environment/path.sh
+[0.570s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/environment/path.dsv
+[0.574s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/local_setup.bash
+[0.578s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/local_setup.sh
+[0.583s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/local_setup.zsh
+[0.588s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/local_setup.dsv
+[0.594s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/package.dsv
+[0.599s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/ament_index/resource_index/packages/hcr5_description
+[0.605s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/cmake/hcr5_descriptionConfig.cmake
+[0.609s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/cmake/hcr5_descriptionConfig-version.cmake
+[0.614s] -- Symlinking: /home/forsaken/Documents/hcr5_ws/install/hcr5_description/share/hcr5_description/package.xml
+[0.619s] Invoked command in '/home/forsaken/Documents/hcr5_ws/build/hcr5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/forsaken/Documents/hcr5_ws/build/hcr5_description

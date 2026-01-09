@@ -1,0 +1,4 @@
+source;share/hcr5_description/local_setup.bash
+source;share/hcr5_description/local_setup.dsv
+source;share/hcr5_description/local_setup.sh
+source;share/hcr5_description/local_setup.zsh

@@ -1,0 +1,1 @@
+/home/forsaken/Documents/hcr5_ws/src/hcr5_moveit_config/launch/setup_assistant.launch.py

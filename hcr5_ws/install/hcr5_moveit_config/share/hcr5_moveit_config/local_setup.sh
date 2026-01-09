@@ -1,0 +1,1 @@
+/home/forsaken/Documents/hcr5_ws/build/hcr5_moveit_config/ament_cmake_environment_hooks/local_setup.sh
