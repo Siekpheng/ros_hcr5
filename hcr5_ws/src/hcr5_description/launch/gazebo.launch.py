@@ -12,7 +12,6 @@ def generate_launch_description():
     pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")
     
     xacro_file = os.path.join(pkg_description, "urdf", "hcr5.xacro")
-    rviz_config_path = os.path.join(pkg_description, "rviz", "hcr5.rviz")
 
     # 2. Process Xacro
     robot_description_content = xacro.process_file(xacro_file).toxml()
