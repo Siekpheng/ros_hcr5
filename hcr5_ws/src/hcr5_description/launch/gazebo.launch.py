@@ -4,7 +4,7 @@ from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
-from launch.conditions import IfCondition, UnlessCondition
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
@@ -16,16 +16,17 @@ def generate_launch_description():
         description='Start Gazebo if true, otherwise connect to real robot'
     )
     
-    # Store the value in a variable to use in conditions
     use_mock_hardware = LaunchConfiguration('use_mock_hardware')
     
     # 2. Paths
     pkg_description = get_package_share_directory("hcr5_description")
     pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")
     xacro_file = os.path.join(pkg_description, "urdf", "hcr5.xacro")
+    
+    # Path to RViz config (Make sure this folder/file exists or remove the -d argument)
+    rviz_config_path = os.path.join(pkg_description, "rviz", "hcr5.rviz")
 
     # 3. Dynamic Xacro Processing
-    # This sends the 'use_mock_hardware' argument into the Xacro file
     robot_description_content = ParameterValue(
         Command(['xacro ', xacro_file, ' use_mock_hardware:=', use_mock_hardware]),
         value_type=str
@@ -35,7 +36,7 @@ def generate_launch_description():
     set_gz_resource_path = SetEnvironmentVariable(
         name='IGN_GAZEBO_RESOURCE_PATH',
         value=[os.path.join(pkg_description, '..')],
-        condition=IfCondition(use_mock_hardware) # Only run if simulating
+        condition=IfCondition(use_mock_hardware)
     )
 
     # 5. Gazebo Sim Launch (SIM ONLY)
@@ -69,7 +70,17 @@ def generate_launch_description():
         }],
     )
 
-    # 8. Spawn Robot in Gazebo (SIM ONLY)
+    # 8. RViz Node (ALWAYS RUN)
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        output='screen',
+        arguments=['-d', rviz_config_path],
+        parameters=[{'use_sim_time': use_mock_hardware}]
+    )
+
+    # 9. Spawn Robot in Gazebo (SIM ONLY)
     spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
@@ -77,8 +88,7 @@ def generate_launch_description():
         condition=IfCondition(use_mock_hardware)
     )
 
-    # 9. Controller Spawners (ALWAYS RUN)
-    # Note: On a real robot, 'use_sim_time' must be False
+    # 10. Controller Spawners (ALWAYS RUN)
     joint_state_broadcaster = Node(
         package="controller_manager",
         executable="spawner",
@@ -99,6 +109,7 @@ def generate_launch_description():
         gz_sim,
         bridge,
         robot_state_publisher,
+        rviz_node, # <--- RViz added here
         spawn_entity,
         joint_state_broadcaster,
         arm_controller

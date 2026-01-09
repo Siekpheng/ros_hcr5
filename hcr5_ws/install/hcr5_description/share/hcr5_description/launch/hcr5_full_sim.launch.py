@@ -1,1 +1,0 @@
-/home/forsaken/Documents/hcr5_ws/src/hcr5_description/launch/hcr5_full_sim.launch.py

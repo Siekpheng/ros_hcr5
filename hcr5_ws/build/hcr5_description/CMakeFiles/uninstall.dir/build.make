@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/forsaken/Documents/hcr5_ws/src/hcr5_description
+CMAKE_SOURCE_DIR = /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/hcr5_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/forsaken/Documents/hcr5_ws/build/hcr5_description
+CMAKE_BINARY_DIR = /home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_description
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/forsaken/Documents/hcr5_ws/build/hcr5_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/forsaken/Documents/hcr5_ws/src/hcr5_description /home/forsaken/Documents/hcr5_ws/src/hcr5_description /home/forsaken/Documents/hcr5_ws/build/hcr5_description /home/forsaken/Documents/hcr5_ws/build/hcr5_description /home/forsaken/Documents/hcr5_ws/build/hcr5_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/hcr5_description /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/hcr5_description /home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_description /home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_description /home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

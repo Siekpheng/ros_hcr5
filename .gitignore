@@ -1,0 +1,40 @@
+# ROS 2 workspace build directories
+build/
+install/
+log/
+
+# colcon cache
+.colcon/
+.colcon_*
+
+# Python build artifacts
+*.pyc
+__pycache__/
+*.egg-info/
+
+# CMake build artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.so
+
+# Local config files
+*.launch.pyc
+*.urdf.xacro.pyc
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# CLion / JetBrains
+.idea/
+
+# Backup / temp files
+*~
+*.swp
+*.bak
+
+# Generated messages and services (sometimes)
+msg_gen/
+srv_gen/
