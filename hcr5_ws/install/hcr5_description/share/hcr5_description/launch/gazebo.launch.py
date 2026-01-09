@@ -77,7 +77,6 @@ def generate_launch_description():
         name='rviz2',
         output='screen',
         arguments=['-d', rviz_config_path],
-        parameters=[{'use_sim_time': use_mock_hardware}]
     )
 
     # 9. Spawn Robot in Gazebo (SIM ONLY)
