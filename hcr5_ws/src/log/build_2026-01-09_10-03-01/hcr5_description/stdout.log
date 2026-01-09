@@ -1,0 +1,44 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/build/hcr5_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/launch/display.launch.py
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/launch/gazebo.launch.py
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/launch/real_robot_rviz.launch.py
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/urdf/hcr5.gazebo
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/urdf/hcr5.trans
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/urdf/hcr5.urdf
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/urdf/hcr5.xacro
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/urdf/materials.xacro
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/base_link.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link1_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link2_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link3_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link4_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link5_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/meshes/link6_1.stl
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/rviz/hcr5.rviz
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/config/hcr5_controllers.yaml
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/ament_index/resource_index/package_run_dependencies/hcr5_description
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/ament_index/resource_index/parent_prefix_path/hcr5_description
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/environment/path.sh
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/environment/path.dsv
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/local_setup.bash
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/local_setup.sh
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/local_setup.zsh
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/local_setup.dsv
+-- Symlinking: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/package.dsv
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/ament_index/resource_index/packages/hcr5_description
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/cmake/hcr5_descriptionConfig.cmake
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/cmake/hcr5_descriptionConfig-version.cmake
+-- Up-to-date symlink: /home/forsaken/Documents/ros_hcr5/hcr5_ws/src/install/hcr5_description/share/hcr5_description/package.xml
