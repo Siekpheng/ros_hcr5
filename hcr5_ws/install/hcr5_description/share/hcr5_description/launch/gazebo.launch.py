@@ -44,7 +44,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")
         ),
-        launch_arguments={'gz_args': '-r sensors.sdf'}.items(),
+        launch_arguments={'gz_args': '-r empty.sdf'}.items(),
         condition=IfCondition(use_mock_hardware)
     )
 
@@ -55,9 +55,9 @@ def generate_launch_description():
         arguments=[
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
             '/camera1/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/camera2/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+            # '/camera2/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             '/camera1/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
-            '/camera2/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'
+            # '/camera2/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'
         ],
         condition=IfCondition(use_mock_hardware)
     )

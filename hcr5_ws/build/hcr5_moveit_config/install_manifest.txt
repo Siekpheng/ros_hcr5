@@ -21,6 +21,7 @@
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/hcr5_full_sim.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/rsp.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/demo.launch.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/camera_viewer.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/setup_assistant.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/move_group.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/config/pilz_cartesian_limits.yaml
