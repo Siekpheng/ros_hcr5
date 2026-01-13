@@ -54,8 +54,10 @@ def generate_launch_description():
         executable='parameter_bridge',
         arguments=[
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'
+            '/camera1/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/camera2/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/camera1/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+            '/camera2/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'
         ],
         condition=IfCondition(use_mock_hardware)
     )
