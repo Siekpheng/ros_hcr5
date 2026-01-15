@@ -89,7 +89,10 @@ def main(args=None):
     client = MoveRobotClient()
     
     # Target Coordinates (Adjust as safe)
-    client.send_goal(-0.3, 0.165, 0.5) 
+    #X (Forward/Back)	+0.915m to −0.915m
+    #Y (Left/Right)	+0.915m to −0.915m
+    #Z (Up/Down)	From ≈−0.2m (below base) to ≈+1.2m (fully vertical)
+    client.send_goal(0.2, 0.6, 0.1) 
     
     rclpy.spin(client)
 

@@ -14,6 +14,7 @@
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/cmake/hcr5_moveit_configConfig-version.cmake
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/package.xml
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/spawn_controllers.launch.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/hcr5_motion_controller.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/moveit_rviz.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/warehouse_db.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/static_virtual_joint_tfs.launch.py
@@ -21,8 +22,11 @@
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/hcr5_full_sim.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/rsp.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/demo.launch.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/hcr5_picker.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/table_calibration.npy
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/camera_viewer.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/setup_assistant.launch.py
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/camera_calibrate.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/launch/move_group.launch.py
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/config/pilz_cartesian_limits.yaml
 /home/forsaken/Documents/ros_hcr5/hcr5_ws/install/hcr5_moveit_config/share/hcr5_moveit_config/config/kinematics.yaml
