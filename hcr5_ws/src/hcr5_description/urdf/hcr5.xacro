@@ -47,7 +47,7 @@
 <joint name="world_to_target" type="fixed">
   <parent link="base_link"/>
   <child link="target_cube"/>
-  <origin xyz="0.2 0.6 0.02" rpy="0 0 0"/>
+  <origin xyz="0.6 0.3 0.02" rpy="0 0 0"/>
 </joint>
 
 <link name="base_link">
