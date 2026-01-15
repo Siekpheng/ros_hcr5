@@ -1,13 +1,1 @@
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-  <gazebo reference="base_link"><material>Gazebo/Black</material></gazebo>
-  <gazebo reference="link1_1"><material>Gazebo/Black</material></gazebo>
-  <gazebo reference="link2_1"><material>Gazebo/Black</material></gazebo>
-
-  <gazebo reference="link3_1"><material>Gazebo/Orange</material></gazebo>
-  <gazebo reference="link4_1"><material>Gazebo/Orange</material></gazebo>
-  <gazebo reference="link5_1"><material>Gazebo/Orange</material></gazebo>
-
-  <gazebo reference="link6_1"><material>Gazebo/Grey</material></gazebo>
-
-</robot>
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/src/hcr5_description/urdf/materials.xacro
