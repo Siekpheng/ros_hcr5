@@ -95,7 +95,7 @@ class HCR5UnifiedPicker(Node):
         # Position Constraint
         pos_con = PositionConstraint()
         pos_con.header.frame_id = "base_link"
-        pos_con.link_name = "link6_1"  # Verify this in RViz/URDF
+        pos_con.link_name = "tcp_link"  # Verify this in RViz/URDF
         
         bounding_box = SolidPrimitive()
         bounding_box.type = SolidPrimitive.BOX
@@ -113,7 +113,7 @@ class HCR5UnifiedPicker(Node):
         # Orientation Constraint (Pointing Down)
         ori_con = OrientationConstraint()
         ori_con.header.frame_id = "base_link"
-        ori_con.link_name = "link6_1"
+        ori_con.link_name = "tcp_link"
         ori_con.orientation.x = 0.0
         ori_con.orientation.y = 1.0 
         ori_con.orientation.z = 0.0

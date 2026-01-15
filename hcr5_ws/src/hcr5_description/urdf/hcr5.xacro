@@ -3,6 +3,7 @@
   
 <xacro:include filename="$(find hcr5_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find hcr5_description)/urdf/hcr5.gazebo" />
+<xacro:include filename="$(find hcr5_description)/urdf/hcr5_gripper.xacro" />
 
 <xacro:arg name="use_mock_hardware" default="true" />
 
@@ -43,6 +44,9 @@
     <geometry><box size="0.04 0.04 0.04"/></geometry>
     <material name="purple"><color rgba="0.5 0 0.5 1"/></material>
   </visual>
+  <collision>
+    <geometry><box size="0.04 0.04 0.04"/></geometry>
+  </collision>
 </link>
 <joint name="world_to_target" type="fixed">
   <parent link="base_link"/>
@@ -211,6 +215,14 @@
   </collision>
 </link>
 
+<xacro:hcr5_gripper parent="link6_1" prefix="" />
+<link name="tcp_link"/>
+<joint name="gripper_to_tcp" type="fixed">
+  <parent link="gripper_base_link"/>
+  <child link="tcp_link"/>
+  <origin xyz="0 0 0.06" rpy="0 0 0"/> 
+</joint>
+
 
 <joint name="joint_1" type="revolute">
   <origin xyz="0.0 0.0 0.03" rpy="0 0 0"/>
@@ -266,7 +278,7 @@
 <ros2_control name="HCR5_Control" type="system">
   <hardware>
     <xacro:if value="$(arg use_mock_hardware)">
-      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
     </xacro:if>
     
     <xacro:unless value="$(arg use_mock_hardware)">
@@ -322,6 +334,9 @@
     <geometry><cylinder radius="0.02" length="2.45"/></geometry>
     <material name="gray"><color rgba="0.5 0.5 0.5 1.0"/></material>
   </visual>
+  <collision>
+    <geometry><cylinder radius="0.02" length="2.45"/></geometry>
+  </collision>
 </link>
 
 <joint name="base_to_pole1" type="fixed">
@@ -335,11 +350,15 @@
     <geometry><box size="0.1 0.1 0.1"/></geometry>
     <material name="blue"><color rgba="0 0 1 1"/></material>
   </visual>
+  <collision>
+    <geometry><box size="0.1 0.1 0.1"/></geometry>
+  </collision>
 </link>
 
 <joint name="pole_to_camera1" type="fixed">
   <parent link="camera_pole1"/>
-  <child link="camera_link1"/> <origin xyz="0.05 -0.05 1.2" rpy="0 1.222 5.495"/> <!--rpy="0 70 315" degree-->
+  <child link="camera_link1"/> 
+  <origin xyz="0.05 -0.05 1.2" rpy="0 1.222 5.495"/> 
 </joint>
 
 <gazebo reference="camera_link1">

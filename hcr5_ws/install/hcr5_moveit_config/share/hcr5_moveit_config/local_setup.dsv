@@ -1,2 +1,1 @@
-source;share/hcr5_moveit_config/environment/ament_prefix_path.sh
-source;share/hcr5_moveit_config/environment/path.sh
+/home/forsaken/Documents/ros_hcr5/hcr5_ws/build/hcr5_moveit_config/ament_cmake_environment_hooks/local_setup.dsv
